@@ -1,0 +1,134 @@
+/* ==UserStyle==
+@name         2016ishNotifications
+@version      20220629.22.52
+@namespace    userstyles.world/user/protaxevader
+@description  replicates notification menu in 2016
+not 100% accurate
+@author       protaxevader
+@license      AGPL-3.0
+==/UserStyle== */
+
+@-moz-document domain("www.youtube.com"), domain("youtu.be") {
+.yt-spec-icon-badge-shape__icon {
+    fill:none;
+    left: 0;
+    opacity: .85;
+    margin-top: -2px;
+    margin-left: 1px;
+    background: no-repeat url(//s.ytimg.com/yts/imgbin/www-hitchhiker-vflNlthLq.webp) -698px -257px;
+    background-size: auto;
+    width: 30px;
+    height: 30px;
+    filter: invert(0.40);
+}
+
+.yt-icon-button[aria-label="Settings"] {
+    background: no-repeat url(//s.ytimg.com/yts/imgbin/www-hitchhiker-vflNlthLq.webp) -624px 2px;
+    opacity:.5;
+    color:transparent
+}
+
+ytd-notification-renderer{
+    border-bottom:1px solid #ddd
+}
+
+html[dark] ytd-notification-renderer {
+    border-bottom-color:#333
+}
+
+html[dark] .yt-icon-button[aria-label="Settings"] {
+    filter:invert(1)
+}
+
+.yt-spec-icon-badge-shape__icon:hover{
+    filter:contrast(0.3)
+}
+
+.yt-spec-icon-badge-shape__icon:active{
+    filter:contrast(10)
+}
+
+
+.yt-spec-icon-badge-shape--type-notification.yt-spec-icon-badge-shape > .yt-spec-icon-badge-shape__icon > yt-icon {
+    display:none;
+}
+
+yt-interaction {
+    display:none;
+}
+yt-img-shadow#avatar.ytd-notification-renderer, yt-img-shadow#avatar.ytd-notification-renderer img.yt-img-shadow{
+    border-radius:50%!important;
+}
+
+ytd-multi-page-menu-renderer[scrollbar-rework] .menu-container.ytd-multi-page-menu-renderer{
+    background:#f5f5f5!important;
+}
+
+.dropdown-content.paper-menu-button, html:not([dark]) ytd-multi-page-menu-renderer {
+    border: 1px solid #c5c5c5!important;
+    border-top: 1px solid #c5c5c5!important;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .18)!important;
+}
+
+h2.ytd-simple-menu-header-renderer{
+    font-weight: 500;
+    font-size: 14px;
+    top:2px!important;
+    position:relative!important;
+}
+
+ytd-multi-page-menu-renderer.style-scope.ytd-popup-container{
+    max-height:432px!important;
+}
+
+.metadata.ytd-notification-renderer{
+    letter-spacing:0px!important;
+    font-size:12px!important;
+    top:-8px!Important;
+    position:relative;
+}
+
+#notification-count {
+border-radius: 2px;
+background: #cb4437;
+z-index:90;
+font-size:11px!important;
+line-height:15px!important;
+}
+#notification-count:after {
+content:"";
+width:15px;
+height:15px;
+border-bottom: 1px solid #fff;
+border-left: 1px solid #fff;
+position:absolute;
+left:-0px;
+z-index:9
+}
+
+tp-yt-iron-dropdown{
+    top:49px;
+}
+tp-yt-iron-dropdown:before{
+    content:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAOCAYAAAA1+Nx+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAADzSURBVDhPtZMJioQwEEWtCJ5BcQPvfybBDQURiYi490yVlkz3qC29PAg/hNR/iASmabopX0Ss+TVgHMfLXxAEAaXrupRXgGEYLgnCMFx3C47jrLtzoO/7p4Ioiig9z6P0fZ/Stm3KM6DrulNBHMeUXM6wxLIsyiOgbdtDQZIklI/lDEtM06TcA5qm2RWkaUp5VM6wxDAMykegrut/AiwXQjwtZ1Ayz/OuBKqquhNkWaaoqnq5nEHJ76NVdF1fTxYEmnnlef5SOYIzOIv/7W/nJiiKYrv4KjiraRp13QnKstwuvAt3YCcJpJR08IlyhruklMoPDLmQhimqPE8AAAAASUVORK5CYII=");
+    position:absolute;
+    top:-13px;
+    left:445px;
+}
+
+ytd-multi-page-menu-renderer[scrollbar-rework] .menu-container.ytd-multi-page-menu-renderer:hover{
+    scrollbar-color:rgb(203, 203, 203)!important;
+}
+
+ytd-simple-menu-header-renderer{
+    border-bottom:none;
+}
+ytd-multi-page-menu-renderer[scrollbar-rework] .menu-container.ytd-multi-page-menu-renderer{
+    border-top:none;
+}
+
+ytd-notification-renderer.unread #new.ytd-notification-renderer 
+{
+  background-color: transparent;
+}
+}
