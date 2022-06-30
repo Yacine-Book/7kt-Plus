@@ -1,0 +1,280 @@
+/* ==UserStyle==
+@name         7kt Plus
+@version      20220629.21.40
+@namespace    userstyles.world/user/protaxevader
+@description  Additional css for 7kttube to make it more accurate
+
+https://7kt.se/downloads/5/7kttube-2016-redux is required.
+@author       protaxevader
+@license      AGPL-3.0
+==/UserStyle== */
+
+@-moz-document domain("www.youtube.com"), domain("youtu.be") {
+/*fixes by rlego */
+ytd-reel-shelf-renderer {
+    display:none
+}
+ytd-search ytd-channel-renderer[use-prominent-thumbs] #avatar-section.ytd-channel-renderer {
+    margin-left:82px;
+    margin-right:8px
+}
+ytd-app .ytd-search ytd-channel-renderer[use-prominent-thumbs] #info-section.ytd-channel-renderer {
+    flex-direction:column
+}
+ytd-app ytd-search #subscribe-button.ytd-channel-renderer {
+    padding:0
+}
+/*this next bit ONLY applies to the option "small" on search vid thumb size*/
+ytd-app ytd-video-renderer[is-search] ytd-thumbnail.ytd-video-renderer {
+    max-width:185px;
+    width:185px;
+    max-height:104px;
+    height:104px;
+    min-height:90px!important;
+    min-width:160px
+}
+ytd-search ytd-channel-renderer[use-prominent-thumbs] #avatar-section.ytd-channel-renderer {
+    margin-left:76px;
+    margin-right:16px
+}
+/*REMOVE THE TOP FROM .text-wrapper.ytd-video-renderer ITS VERY ANNOYING*/
+#menu.ytd-video-renderer {
+    height:16.8px
+}
+ytd-app ytd-video-renderer[is-search] #channel-info.ytd-video-renderer {
+    padding:0
+}
+ytd-app #channel-name.ytd-video-renderer {
+    line-height:13px;
+    padding:0
+}
+ytd-app ytd-video-renderer[is-search] #metadata-line.ytd-video-meta-block {
+    font-size:12px!important
+}
+ytd-app ytd-mealbar-promo-renderer {
+    display:none
+}
+ytd-app tp-yt-paper-item.ytd-menu-navigation-item-renderer:hover,ytd-app tp-yt-paper-listbox.yt-dropdown-menu tp-yt-paper-item.yt-dropdown-menu:hover {
+background:#444
+}
+ytd-app tp-yt-paper-item.ytd-menu-navigation-item-renderer:hover yt-formatted-string, ytd-app tp-yt-paper-listbox.yt-dropdown-menu tp-yt-paper-item.yt-dropdown-menu:hover .yt-dropdown-menu{
+color:#fff
+}
+ytd-app ytd-menu-popup-renderer tp-yt-paper-listbox tp-yt-paper-item yt-icon {
+    display:none!important
+}
+ytd-app ytd-menu-popup-renderer tp-yt-paper-listbox tp-yt-paper-item, ytd-app tp-yt-paper-listbox.yt-dropdown-menu tp-yt-paper-item.yt-dropdown-menu {
+    min-height:24px!Important;
+}
+}
+
+@-moz-document domain("www.youtube.com"), domain("youtu.be") {
+/*fixes by Shiny (creator)*/
+/*Revert Search */
+#search-form > .ytd-searchbox.style-scope{min-height: 23px !important; min-width: 570px !important;}
+button#search-icon-legacy.style-scope.ytd-searchbox
+{
+  min-height: 27px !important;
+  min-width: 65px !important;
+  padding-left: 0 !important; 
+  padding-right: 0 !important; 
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  float: right !important;
+}
+button#search-icon-legacy.style-scope.ytd-searchbox
+{
+    flex-shrink: 0;
+
+}
+#masthead #search-icon-legacy.ytd-searchbox
+{
+    width: 66px !important; 
+}
+#masthead-container #search-icon-legacy.ytd-searchbox yt-icon.ytd-searchbox
+{
+    border: none;
+    display: block;
+    opacity: .6;
+    padding: 0;
+    text-indent: -10000px;
+    background: no-repeat url(//s.ytimg.com/yts/imgbin/www-hitchhiker-vflDupCLr.png) -559px -31px;
+    background-size: auto;
+    width: 15px;
+    height: 15px;
+    box-shadow: none;
+    position: static;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+ytd-searchbox[system-icons] #search-icon-legacy.ytd-searchbox yt-icon.ytd-searchbox
+{
+    fill: transparent;
+}
+div#container.style-scope.ytd-searchbox
+{
+    width: 570px !important;
+    height: 23px !important;
+    margin-left: 0;
+    padding-left: 6px;
+}
+ytd-searchbox[has-focus] #container.ytd-searchbox 
+{
+    padding-left: 6px;
+}
+ytd-searchbox[has-focus] #search-icon.ytd-searchbox 
+{
+    display:none
+}
+html .gsfs {
+    max-height:20px
+}
+html .sbdd_a[dir="ltr"] .fr [href="#ps"],html #search-clear-button yt-icon{
+        background: no-repeat url(//s.ytimg.com/yts/imgbin/www-hitchhiker-vflKclzgY.webp) -90px -190px;
+    height:20px;
+    opacity:.5
+}
+html #search-clear-button yt-icon {
+    margin-top:7px;
+    margin-left:3px
+}
+html .sbdd_a[dir="ltr"] .fr [href="#ps"] svg,html ytd-app  #search-clear-button yt-icon svg{
+    display: none
+}
+html div.gstl_50 {
+    width:542px!important
+}
+/*ryd blue sparkbar by me*/
+/*Return Youtube Dislike script **MUST** be used (no extension)*/
+#ryd-bar 
+{
+    height: 2px;
+    overflow: hidden;
+    background: #167ac6;
+}
+/*Date added capitalization fix*/
+[page-subtype="channels"] ytd-channel-sub-menu-renderer #icon-label.yt-dropdown-menu 
+{
+    text-transform:none !important;
+    display: inline-block;
+    height: 28px;
+    font-weight: 500;
+    font-size: 11px;
+    text-decoration: none;
+    white-space: nowrap;
+    word-wrap: normal;
+    line-height: normal;
+    padding: 0 10px;
+    outline: 0;
+    vertical-align: middle;
+    cursor: pointer;
+    *overflow: visible;
+    border-radius: 2px;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.05);
+}
+/*show more*/
+#more yt-formatted-string
+{
+ visibility: hidden !important;
+}
+#more yt-formatted-string::before
+{
+    visibility: visible !important;
+    content: "SHOW MORE" !important;
+}
+/*2016 player theme*/
+.ytp-settings-button.ytp-hd-quality-badge::after, .ytp-settings-button.ytp-hdr-quality-badge::after, .ytp-settings-button.ytp-4k-quality-badge::after, .ytp-settings-button.ytp-5k-quality-badge::after, .ytp-settings-button.ytp-8k-quality-badge::after, .ytp-settings-button.ytp-3d-badge-grey::after, .ytp-settings-button.ytp-3d-badge::after 
+{
+  background-color: #f12b24;
+}
+.ytp-swatch-color 
+{
+  color: #f12b24;
+}
+.ytp-settings-button.ytp-hd-quality-badge::after
+{
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMTAwJSIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgMTMgOSIgd2lkdGg9IjEwMCUiPjxwYXRoIGQ9Ik01LDcgTDYsNyBMNiw4IEw1LDggTDUsNyBaIE0xMCwzIEwxMCw0IEw4LDQgTDgsMyBMMTAsMyBaIE0zLDYgTDMsNSBMNSw1IEw1LDYgTDMsNiBaIE0yLDcgTDMsNyBMMyw4IEwyLDggTDIsNyBaIE03LDcgTDEwLDcgTDEwLDggTDcsOCBMNyw3IFogTTEwLDYgTDExLDYgTDExLDcgTDEwLDcgTDEwLDYgWiIgZmlsbD0iIzAwMCIgZmlsbC1vcGFjaXR5PSIwLjY0NzEiIGZpbGwtcnVsZT0iZXZlbm9kZCIgLz48cGF0aCBkPSJNNSw3IEw1LDYgTDUsNSBMMyw1IEwzLDYgTDMsNyBMMiw3IEwyLDIgTDMsMiBMMyw0IEw1LDQgTDUsMiBMNiwyIEw2LDcgTDUsNyBaIE0xMSw2IEwxMCw2IEwxMCw3IEw3LDcgTDcsMiBMMTAsMiBMMTAsMyBMMTEsMyBMMTEsNiBaIE0xMCw0IEwxMCwzIEw4LDMgTDgsNCBMOCw2IEwxMCw2IEwxMCw0IFoiIGZpbGw9IiNmZmYiIGZpbGwtcnVsZT0iZXZlbm9kZCIgLz48L3N2Zz4=);
+}
+.ytp-menuitem[aria-checked="true"] .ytp-menuitem-toggle-checkbox 
+{
+  background: #f12b24;
+}
+.ytp-swatch-background-color, .ytp-swatch-background-color-secondary 
+{
+  background-color: #f12b24;
+}
+/*If you are using appbar script*/
+html:not([dark]) [page-subtype="home"] .ytcp-nav-home span, html:not([dark]) [page-subtype="subscriptions"] .ytcp-nav-subs span, html:not([dark]) [page-subtype="trending"] .ytcp-nav-trending span
+{
+    font-weight: 500;
+}
+/*Hide chapters in search*/
+#expandable-metadata > .ytd-video-renderer.style-scope
+{
+    display: none !important;
+}
+}
+
+@-moz-document url-prefix("www.youtube.com"), url-prefix("youtu.be") {
+/*7kt watchpage fixes by SuperKamekArea*/
+@media screen and (max-width: 1016px) {
+  #related {
+position: relative !important;
+      left: 15px;
+  }
+    ytd-comments {
+        position: relative !important;
+      top: 15px;
+    }
+    ytd-live-chat-frame {
+        position: relative !important;
+      left: 15px;
+    }
+    #button[aria-label="Show more"][role="button"] {
+    padding: 15px !important;
+    margin-top: 15px;
+}
+    ytd-live-chat-frame[collapsed]{
+      height: 31px!important;
+}
+}
+ytd-app {
+    overflow: hidden !important;
+}
+ytd-page-manager {
+    overflow: hidden !important;
+    padding-bottom: 15px;
+}
+
+.ytd-video-secondary-info-renderer[slot^="less-button"],.ytd-video-secondary-info-renderer[slot^="more-button"] {
+    padding: 6px !important;
+    padding-bottom: 2px !important;
+        margin: 0px !important;
+}
+#toggle.ytd-compact-autoplay-renderer[checked] .toggle-label {
+    position: relative !important;
+    top: 1px !important
+}
+ytd-merch-shelf-renderer {
+    display: none !important;
+}
+#ticket-shelf {
+    display: none !important;
+}
+}
+
+@-moz-document domain("www.youtube.com"), domain("youtu.be") {
+/*Aubrey*/
+/*Notif color fix*/
+ytd-notification-topbar-button-shape-renderer yt-icon {
+    color: var(--yt-spec-icon-inactive);
+}
+}
+
+@-moz-document domain("www.youtube.com"), domain("youtu.be") {
+/* idk who made*/
+.ytd-video-primary-info-renderer.style-scope.title > .ytd-video-primary-info-renderer.style-scope {
+    font-family:roboto!important;
+    font-weight:normal!important;
+}
+}
