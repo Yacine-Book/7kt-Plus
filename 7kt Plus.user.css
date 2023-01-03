@@ -296,4 +296,8 @@ html[dark] .sbdd_a[dir="ltr"] .fr [href="#ps"],html #search-clear-button yt-icon
 html .sbdd_a[dir="ltr"] .fr [href="#ps"],html #search-clear-button yt-icon{
         color:transparent
 }
+    
+ytd-menu-popup-renderer {
+    border-radius:0 !important;
+}
 }
