@@ -278,3 +278,22 @@ ytd-notification-topbar-button-shape-renderer yt-icon {
     font-weight:normal!important;
 }
 }
+
+@-moz-document domain("www.youtube.com"), domain("youtu.be") {
+/*Fixes Done by Yacine*/
+#channel-container.ytd-active-account-header-renderer {
+    margin-top: -13px !important;   
+}
+    
+#account-name.ytd-active-account-header-renderer {
+    margin-top: 21px;
+}
+    
+html[dark] .sbdd_a[dir="ltr"] .fr [href="#ps"],html #search-clear-button yt-icon{
+    filter:invert(1);
+}
+    
+html .sbdd_a[dir="ltr"] .fr [href="#ps"],html #search-clear-button yt-icon{
+        color:transparent
+}
+}
