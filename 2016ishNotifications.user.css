@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         2016ishNotifications
-@version      20220629.22.52
+@version      20230103.15.40
 @namespace    userstyles.world/user/protaxevader
 @description  replicates notification menu in 2016
 not 100% accurate
@@ -20,6 +20,19 @@ not 100% accurate
     width: 30px;
     height: 30px;
     filter: invert(0.40);
+}
+    
+html[dark] .yt-spec-icon-badge-shape__icon {
+    fill:none;
+    left: 0;
+    opacity: .85;
+    margin-top: -2px;
+    margin-left: 1px;
+    background: no-repeat url(//s.ytimg.com/yts/imgbin/www-hitchhiker-vflNlthLq.webp) -698px -257px;
+    background-size: auto;
+    width: 30px;
+    height: 30px;
+    filter: invert(0.56);
 }
 
 .yt-icon-button[aria-label="Settings"] {
@@ -63,6 +76,10 @@ yt-img-shadow#avatar.ytd-notification-renderer, yt-img-shadow#avatar.ytd-notific
 ytd-multi-page-menu-renderer[scrollbar-rework] .menu-container.ytd-multi-page-menu-renderer{
     background:#f5f5f5!important;
 }
+    
+html[dark] ytd-multi-page-menu-renderer[scrollbar-rework] .menu-container.ytd-multi-page-menu-renderer{
+    background:#151515!important;
+}
 
 .dropdown-content.paper-menu-button, html:not([dark]) ytd-multi-page-menu-renderer {
     border: 1px solid #c5c5c5!important;
@@ -78,7 +95,7 @@ h2.ytd-simple-menu-header-renderer{
 }
 
 ytd-multi-page-menu-renderer.style-scope.ytd-popup-container{
-    max-height:432px!important;
+    max-height:468px!important;
 }
 
 .metadata.ytd-notification-renderer{
@@ -115,13 +132,25 @@ tp-yt-iron-dropdown:before{
     top:-13px;
     left:445px;
 }
+    
+html[dark] tp-yt-iron-dropdown:before{
+content:url(https://i.ibb.co/gSCm3tM/You-Tube-2016-Notifications-Arrow-Dark-Mode.png);
+    position:absolute;
+    top:-13px;
+    left:445px;
+}
 
 ytd-multi-page-menu-renderer[scrollbar-rework] .menu-container.ytd-multi-page-menu-renderer:hover{
-    scrollbar-color:rgb(203, 203, 203)!important;
+    scrollbar-color:rgb(202,202,202)!important;
 }
 
 ytd-simple-menu-header-renderer{
     border-bottom:none;
+}
+html[dark] ytd-simple-menu-header-renderer{
+    border-top:solid;
+    border-top-color:#383838!important;
+    border-width:1px
 }
 ytd-multi-page-menu-renderer[scrollbar-rework] .menu-container.ytd-multi-page-menu-renderer{
     border-top:none;
