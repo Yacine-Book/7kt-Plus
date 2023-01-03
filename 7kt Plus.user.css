@@ -298,6 +298,11 @@ html .sbdd_a[dir="ltr"] .fr [href="#ps"],html #search-clear-button yt-icon{
 }
     
 ytd-menu-popup-renderer {
-    border-radius:0 !important;
+    border-radius:0 !important;  
+}
+    
+[menu-style="multi-page-menu-style-type-system"] #container yt-multi-page-menu-section-renderer:first-child ytd-compact-link-renderer:first-child #label {
+    margin-left: -1px;
+    margin-bottom: 7px;
 }
 }
