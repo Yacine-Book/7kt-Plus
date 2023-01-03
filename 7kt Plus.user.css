@@ -324,4 +324,8 @@ ytd-shared-post-renderer[show-full-content-text] #repost-content-text.ytd-shared
 #repost-author-text.yt-simple-endpoint.ytd-shared-post-renderer {
     color: #128ee9 !important
 }
+
+ytd-button-renderer.style-primary:nth-of-type(2) {
+    position: static;
+}
 }
