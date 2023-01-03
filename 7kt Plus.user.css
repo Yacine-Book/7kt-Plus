@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         7kt Plus
-@version      20230103.15.42
+@version      20220629.21.40
 @namespace    userstyles.world/user/protaxevader
 @description  Additional css for 7kttube to make it more accurate
 
@@ -294,9 +294,11 @@ html[dark] .sbdd_a[dir="ltr"] .fr [href="#ps"],html #search-clear-button yt-icon
 }
     
 html .sbdd_a[dir="ltr"] .fr [href="#ps"],html #search-clear-button yt-icon{
-        color:transparent
+    background: no-repeat url(//s.ytimg.com/yts/imgbin/www-hitchhiker-vflKclzgY.webp) -91px -187px;
+    color:transparent;
+    margin-right: -39px
 }
-    
+
 ytd-menu-popup-renderer {
     border-radius:0 !important;  
 }
@@ -305,8 +307,7 @@ ytd-menu-popup-renderer {
     margin-left: -1px;
     margin-bottom: 7px;
 }
-}
-
+    
 #repost-author-thumbnail.ytd-shared-post-renderer yt-img-shadow.ytd-shared-post-renderer {
     border-radius: 0%;
     width: 48px;
@@ -324,8 +325,21 @@ ytd-shared-post-renderer[show-full-content-text] #repost-content-text.ytd-shared
 #repost-author-text.yt-simple-endpoint.ytd-shared-post-renderer {
     color: #128ee9 !important
 }
-
+    
 ytd-button-renderer.style-primary:nth-of-type(2) {
     position: static;
+}
+    
+#contentContainer.tp-yt-app-header ytd-button-renderer:nth-of-type(2) #button.ytd-button-renderer yt-formatted-string.ytd-button-renderer::after {
+    color: transparent !important;
+}
+    
+#contentContainer.tp-yt-app-header ytd-button-renderer:nth-of-type(2) #button.ytd-button-renderer yt-formatted-string.ytd-button-renderer:hover {
+    text-decoration: none;
+}
+    
+
+#contentContainer.tp-yt-app-header ytd-button-renderer:nth-of-type(2) #button.ytd-button-renderer yt-formatted-string.ytd-button-renderer::before {
+    background: none;
 }
 }
