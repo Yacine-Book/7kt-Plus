@@ -23,15 +23,6 @@ not 100% accurate
 }
     
 html[dark] .yt-spec-icon-badge-shape__icon {
-    fill:none;
-    left: 0;
-    opacity: .85;
-    margin-top: -2px;
-    margin-left: 1px;
-    background: no-repeat url(//s.ytimg.com/yts/imgbin/www-hitchhiker-vflNlthLq.webp) -698px -257px;
-    background-size: auto;
-    width: 30px;
-    height: 30px;
     filter: invert(0.56);
 }
 
