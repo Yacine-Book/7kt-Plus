@@ -306,3 +306,22 @@ ytd-menu-popup-renderer {
     margin-bottom: 7px;
 }
 }
+
+#repost-author-thumbnail.ytd-shared-post-renderer yt-img-shadow.ytd-shared-post-renderer {
+    border-radius: 0%;
+    width: 48px;
+    height: 48px;
+}
+    
+#repost-context.ytd-shared-post-renderer {
+    margin-left: -16px
+}
+    
+ytd-shared-post-renderer[show-full-content-text] #repost-content-text.ytd-shared-post-renderer {
+    font-size: 13px;
+}
+
+#repost-author-text.yt-simple-endpoint.ytd-shared-post-renderer {
+    color: #128ee9 !important
+}
+}
